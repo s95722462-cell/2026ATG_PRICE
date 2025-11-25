@@ -66,7 +66,7 @@ h1 {
         display: block;
         position: relative;
         padding: 10px;
-        padding-left: 40%; /* Space for the label */
+        padding-left: 50%; /* Increased space for the label */
         text-align: right;
         border: none;
         border-bottom: 1px solid #eee;
@@ -78,7 +78,7 @@ h1 {
         content: attr(data-label); /* Use data-label for the "header" */
         position: absolute;
         left: 10px;
-        width: 35%; /* Fixed width for the label */
+        width: 45%; /* Increased fixed width for the label */
         font-weight: bold;
         text-align: left;
         color: #495057;
