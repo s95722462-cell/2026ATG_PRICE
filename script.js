@@ -28,7 +28,7 @@
             }
             productData = await response.json();
             console.log('제품 데이터 로드 완료.', productData.length, '개 항목');
-            resultsTableBody.innerHTML = `<tr><td colspan="5" class="text-center">검색어를 입력하고 검색 버튼을 누르세요.</td></tr>`;
+            resultsTableBody.innerHTML = `<tr><td colspan="5" class="text-center placeholder-message">검색어를 입력하고 검색 버튼을 누르세요.</td></tr>`;
         } catch (error) {
             console.error('제품 데이터를 불러오는 중 오류 발생:', error);
             errorMessageDiv.textContent = '데이터를 불러오는 데 실패했습니다. (Failed to fetch)';

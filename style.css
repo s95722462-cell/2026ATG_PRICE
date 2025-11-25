@@ -83,4 +83,18 @@ h1 {
         text-align: left;
         color: #495057;
     }
+
+    /* Style for the placeholder message on mobile */
+    .table td.placeholder-message {
+        text-align: center; /* Center the text */
+        padding-left: 10px; /* Reset padding-left */
+        padding-right: 10px; /* Ensure symmetric padding */
+        position: static; /* Remove relative positioning */
+        display: table-cell; /* Revert to default table cell display */
+        vertical-align: middle;
+        white-space: normal; /* Allow text to wrap if needed */
+    }
+    .table td.placeholder-message::before {
+        content: none; /* Hide the data-label pseudo-element for message */
+    }
 }
