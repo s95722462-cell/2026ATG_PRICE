@@ -60,22 +60,27 @@ h1 {
         margin-bottom: 15px;
         border: 1px solid #dee2e6;
         border-radius: 5px;
-        padding: 10px;
+        padding: 0;
     }
     .table td {
-        display: flex;
-        justify-content: space-between;
-        padding: 8px;
-        border: none;
+        display: block;
         position: relative;
-        text-align: right; /* Align text to the right */
+        padding: 10px;
+        padding-left: 40%; /* Space for the label */
+        text-align: right;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+    .table tr td:last-child {
+        border-bottom: none;
     }
     .table td::before {
         content: attr(data-label); /* Use data-label for the "header" */
         position: absolute;
         left: 10px;
+        width: 35%; /* Fixed width for the label */
         font-weight: bold;
-        text-align: left; /* Align header text to the left */
+        text-align: left;
         color: #495057;
     }
 }
