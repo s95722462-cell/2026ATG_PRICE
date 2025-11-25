@@ -72,7 +72,8 @@
                 row.dataset.code = item['품목코드'];
                 row.classList.add('clickable-row');
 
-                const shareButton = `<button class="btn btn-sm btn-outline-secondary share-btn" data-name="${item['품목명']}" data-price="${calculatedDisplayPrice}">공유</button>`;
+                const isSamePrice = (formattedBasePrice === calculatedDisplayPrice);
+                const shareButton = `<button class="btn btn-sm btn-outline-secondary share-btn${isSamePrice ? ' disabled' : ''}" ${isSamePrice ? 'disabled' : ''} data-name="${item['품목명']}" data-price="${calculatedDisplayPrice}">${isSamePrice ? '동일 가격' : '공유'}</button>`;
 
                 row.innerHTML = `
                     <td data-label="품목코드">${item['품목코드'] || 'N/A'}</td>
