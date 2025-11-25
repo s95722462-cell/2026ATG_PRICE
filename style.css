@@ -1,0 +1,81 @@
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+.container {
+    max-width: 900px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+h1 {
+    color: #343a40;
+    font-weight: bold;
+}
+.voice-search-btn {
+    width: 60px; /* Fixed width for the voice search button */
+}
+.error-message {
+    color: #dc3545;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.table thead th {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+}
+.table tbody td {
+    text-align: center;
+    vertical-align: middle;
+}
+/* Style for making rows clickable */
+.clickable-row:hover {
+    background-color: #e9ecef; /* Light grey highlight on hover */
+    cursor: pointer; /* Pointer cursor to indicate it's clickable */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    .table-responsive {
+        border: none;
+    }
+    .table thead {
+        display: none; /* Hide table headers on small screens */
+    }
+    .table, .table tbody, .table tr, .table td {
+        display: block;
+        width: 100%;
+    }
+    .table tr {
+        margin-bottom: 15px;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    .table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px;
+        border: none;
+        position: relative;
+        text-align: right; /* Align text to the right */
+    }
+    .table td::before {
+        content: attr(data-label); /* Use data-label for the "header" */
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        text-align: left; /* Align header text to the left */
+        color: #495057;
+    }
+}
